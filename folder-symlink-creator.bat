@@ -8,8 +8,8 @@ echo Welcome to qfoxb's Symbolic Folder Link Creator!
 pause
 echo Now, type/paste the folder path the "shortcut" will be creaated.
 set /p shortcutdir=
-IF NOT EXIST %shortcutdir% GOTO SHORTCUTDIREXISTS
 echo Now, type/paste the folder path the shortcut will redirect to.
+echo If the folder already exists, the symlink creation will fail.
 set /p linkdir=
 echo Creating a symbolic Folder link.
 mklink /D %shortcutdir% %linkdir%
